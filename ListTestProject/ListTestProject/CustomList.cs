@@ -30,7 +30,13 @@ namespace ListTestProject
 
         public void Add(T itemToAdd)
         {
+            items[0] = itemToAdd;
+        }
 
+        public bool Remove(T item)
+        {
+
+            return true;
         }
     }
 }
