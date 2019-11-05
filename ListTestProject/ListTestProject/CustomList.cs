@@ -28,5 +28,9 @@ namespace ListTestProject
             items = new T[capacity];
         }
 
+        public void Add(T itemToAdd)
+        {
+
+        }
     }
 }
