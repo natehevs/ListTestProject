@@ -65,9 +65,10 @@ namespace ListTestProject
             count++;
         }
          
-        public bool Remove(T itemToRemove)
+        public void Remove(T itemToRemove)
         {
-            return true;
+            T[] newArray;
+            
         }
     }
 }
