@@ -20,6 +20,26 @@ namespace ListTestProject
             }
         }
 
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+        }
+
+        public T this [int i]
+        {
+            get
+            {
+                return items[i];
+            }
+            set
+            {
+                items[i] = value;
+            }
+        }
+
 
         public CustomList()
         {
@@ -30,12 +50,23 @@ namespace ListTestProject
 
         public void Add(T itemToAdd)
         {
-            items[0] = itemToAdd;
+            T[] newArray;
+            if (capacity == count)
+            {
+                capacity = capacity * 2;
+                newArray = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                    newArray[i] = items[i];
+                }
+                items = newArray;
+            }
+            items[count] = itemToAdd;
+            count++;
         }
 
-        public bool Remove(T item)
+        public bool Remove(T itemToRemove)
         {
-
             return true;
         }
     }
