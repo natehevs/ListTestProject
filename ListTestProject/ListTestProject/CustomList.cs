@@ -67,8 +67,21 @@ namespace ListTestProject
          
         public void Remove(T itemToRemove)
         {
+            //take notice of the list
+            //create a newArray for the values that are not the itemToRemove to be placed in
+            //if the itemToRemove does not exist then it returns same list
+            //if the itemToRemove is found then it skips over the value not adding it to the newArray
+            //once the newArray is built then increment the count by 1
             T[] newArray;
-            
+            for (int i = 0; i < count; i++)
+            {
+                
+                if (itemToRemove.Equals(items))
+                {
+                    
+                }
+            }
+            count--;
         }
     }
 }
