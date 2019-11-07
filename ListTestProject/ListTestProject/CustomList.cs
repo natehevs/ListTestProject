@@ -72,15 +72,19 @@ namespace ListTestProject
             //if the itemToRemove does not exist then it returns same list
             //if the itemToRemove is found then it skips over the value not adding it to the newArray
             //once the newArray is built then increment the count by 1
-            T[] newArray;
-            for (int i = 0; i < count; i++)
+            T[] newArray = new T[count];
+            for (int i = 0, j = 0; i < count; i++, j++)
             {
-                
-                if (itemToRemove.Equals(items))
+                if (itemToRemove.Equals(items[i]))
                 {
-                    
+                    j--;
+                }
+                else
+                {
+                    newArray[j] = items[i];
                 }
             }
+            items = newArray;
             count--;
         }
     }
