@@ -226,28 +226,9 @@ namespace ListTests
         }
 
         [TestMethod]
-        public void CustomList_Remove_Number_Access_Index()
+        public void Override_List_ToStringExample1()
         {
-            //arrange
-            CustomList<int> testList = new CustomList<int>();
-            bool expected = true;
-            bool actual = false;
-            //act
-            testList.Add(22);
-            testList.Add(50);
-            testList.Add(13);
-            testList.Remove(13);
-            try
-            {
-                int numberGrab = testList[2];
-            }
-            catch
-            {
-                actual = true;
-            }
-            
-            //Assert
-            Assert.AreEqual(expected, actual);
+
         }
     }
 }
