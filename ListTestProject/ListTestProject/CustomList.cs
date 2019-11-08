@@ -93,7 +93,12 @@ namespace ListTestProject
 
         public override string ToString()
         {
-            return base.ToString();
+            string listString = "";
+            for (int i = 0; i < Count; i++)
+            {
+                listString += items[i].ToString();
+            }
+            return listString;
         }
     }
 }
