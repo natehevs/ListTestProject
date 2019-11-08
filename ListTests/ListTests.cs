@@ -226,9 +226,68 @@ namespace ListTests
         }
 
         [TestMethod]
-        public void Override_List_ToStringExample1()
+        public void ConvertInt_List_ToStringExample1()
         {
-
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            string expected = "1";
+            string actual;
+            int number1 = 1;
+            //act
+            testList.Add(number1);
+            actual = testList.ToString();
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ConvertInt_List_ToStringExample2()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            string expected = "1234";
+            string actual;
+            int number1 = 1;
+            int number2 = 2;
+            int number3 = 3;
+            int number4 = 4;
+            //act
+            testList.Add(number1);
+            testList.Add(number2);
+            testList.Add(number3);
+            testList.Add(number4);
+            actual = testList.ToString();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ConvertInt_List_ToStringExample3()
+        {
+            //arrange
+            CustomList<char> testList = new CustomList<char>();
+            string expected = "fishing";
+            string actual;
+            char char1 = 'f';
+            char char2 = 'i';
+            char char3 = 's';
+            char char4 = 'h';
+            char char5 = 'i';
+            char char6 = 'n';
+            char char7 = 'g';
+            //act
+            testList.Add(char1);
+            testList.Add(char2);
+            testList.Add(char3);
+            testList.Add(char4);
+            testList.Add(char5);
+            testList.Add(char6);
+            testList.Add(char7);
+            actual = testList.ToString();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        
     }
 }

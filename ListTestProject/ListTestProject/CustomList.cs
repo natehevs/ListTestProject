@@ -8,9 +8,9 @@ namespace ListTestProject
 {
     public class CustomList<T>
     {
-        private T[] items;
-        private int capacity;
-        private int count;
+        public T[] items;
+        public int capacity;
+        public int count;
 
         public int Count
         {
