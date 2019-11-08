@@ -288,6 +288,29 @@ namespace ListTests
             Assert.AreEqual(expected, actual);
         }
 
-        
+        public void Overload_plus_Operator()
+        {
+            //arrange
+            CustomList<int> testList1 = new CustomList<int>();
+            CustomList<int> testList2 = new CustomList<int>();
+            int expected = 123456;
+            int actual;
+            int number1 = 1;
+            int number2 = 2;
+            int number3 = 3;
+            int number4 = 4;
+            int number5 = 5;
+            int number6 = 6;
+            //act
+            testList1.Add(number1);
+            testList1.Add(number3);
+            testList1.Add(number5);
+            testList2.Add(number2);
+            testList2.Add(number4);
+            testList2.Add(number6);
+            actual = testList1 + testList2;
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

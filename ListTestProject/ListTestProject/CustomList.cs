@@ -93,12 +93,12 @@ namespace ListTestProject
 
         public override string ToString()
         {
-            string listString = "";
+            string listOfStrings = "";
             for (int i = 0; i < Count; i++)
             {
-                listString += items[i].ToString();
+                listOfStrings += items[i].ToString();
             }
-            return listString;
+            return listOfStrings;
         }
     }
 }
