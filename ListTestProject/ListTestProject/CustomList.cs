@@ -100,5 +100,19 @@ namespace ListTestProject
             }
             return listOfStrings;
         }
+
+        public static CustomList<T> operator +(CustomList<T> One, CustomList<T> Two)
+        {
+            CustomList<T> allCustomLists = new CustomList<T>();
+            for (int i = 0; i < One.Count; i++)
+            {
+                allCustomLists.Add(One[i]);
+            }
+            for (int i = 0; i < Two.Count; i++)
+            {
+                allCustomLists.Add(Two[i]);
+            }
+            return allCustomLists;
+        }
     }
 }
